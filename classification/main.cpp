@@ -6,8 +6,7 @@
 using namespace std::chrono;
 using namespace std;
 
-void read_input(string file_name)
-{
+void read_input(string file_name) {
     ifstream ifs;
 
     ifs.open(file_name.c_str(), ios::in);
@@ -19,12 +18,10 @@ void read_input(string file_name)
     ifs.close();
 }
 
-void solve()
-{
+void solve() {
 }
 
-void write_output(string output_file)
-{
+void write_output(string output_file) {
     ofstream ofs;
 
     ofs.open(output_file.c_str(), ios::out);
@@ -36,8 +33,7 @@ void write_output(string output_file)
     ofs.close();
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     vector<string> input_files;
 
     for (unsigned int i = 1; i < argc; i++) {

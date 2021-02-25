@@ -67,8 +67,7 @@ unsigned int sort_pizzas(pizza &a, pizza &b) {
     return a.ingredients.size() > b.ingredients.size();
 }
 
-void read_input(string file_name)
-{
+void read_input(string file_name) {
     ifstream ifs;
 
     ifs.open(file_name.c_str(), ios::in);
@@ -97,29 +96,7 @@ void read_input(string file_name)
     ifs.close();
 }
 
-unsigned int get_smallest_team_size()
-{
-    unsigned int team_size = 0;
-
-    if (T2 > 0) {
-        team_size = 2;
-        T2--;
-    } else if (T3 > 0) {
-        team_size = 3;
-        T3--;
-    } else if (T4 > 0) {
-        team_size = 4;
-        T4--;
-    }
-
-    if (pizzas.size() < team_size)
-        team_size = 0;
-
-    return team_size;
-}
-
-unsigned int get_biggest_team_size()
-{
+unsigned int get_biggest_team_size() {
     unsigned int team_size = 0;
 
     if (T4 > 0) {
@@ -139,8 +116,7 @@ unsigned int get_biggest_team_size()
     return team_size;
 }
 
-void solve()
-{
+void solve() {
     unsigned int max_idx;
     unsigned int tmp_score;
     unsigned int max_score;
@@ -197,8 +173,7 @@ void solve()
     }
 }
 
-void write_output(string output_file)
-{
+void write_output(string output_file) {
     unsigned int total_score = 0;
     ofstream ofs;
 
@@ -220,8 +195,7 @@ void write_output(string output_file)
     ofs.close();
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     vector<string> input_files;
 
     for (unsigned int i = 1; i < argc; i++) {
